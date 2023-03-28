@@ -4,13 +4,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class LaunchChrome {
 
@@ -18,8 +14,12 @@ public class LaunchChrome {
 
 //		 System.setProperty("webdriver.gecko.driver", "driver/geckodriver");
 //		 WebDriver driver = new FirefoxDriver();
-		System.setProperty("webdriver.chrome.driver", "/Users/comet/Selenium/Drivers/chromedriver");
-		WebDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "/Users/comet/Selenium/Drivers/chromedriver");  
+		ChromeOptions options=new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		//to avoid seeing the message : "chrome is being controlled by automated test software" use the below code
+		options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+		WebDriver driver=new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
 		driver.get("https://www.google.com/");
