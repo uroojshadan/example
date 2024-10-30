@@ -1,8 +1,14 @@
 This line belongs to Urooj Shadan Manha Mohammed 123410000 malik Osman Mohammed
+<<<<<<< HEAD
 this is line two
 this is line three
+=======
+this is line 1
+this is line 2; line 3, 4 5
+>>>>>>> stash
 This is new line added by urooj
 Additional line - 10/29: new content_added by Urooj
+added one extra kine 10/29
 hello this is additional 
 bye
 how are you
