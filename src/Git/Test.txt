@@ -6,7 +6,8 @@ this is line 2;
 This is new line added by urooj- testing merge tool 10/29; hello
 Additional line - 10/29: new content_added by Urooj
 added one extra kine 10/29
-hello this is additional 
+hello this is additional Changed by Malik
+
 bye
 how are you
 This line is Nine
